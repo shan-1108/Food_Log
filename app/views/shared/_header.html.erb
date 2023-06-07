@@ -1,0 +1,43 @@
+<section class="hero is-primary is-small">
+  <!-- Hero head: will stick at the top -->
+  <div class="hero-head">
+    <nav class="navbar">
+      <div class="container">
+        <div class="navbar-brand">
+         <%= link_to root_path, class:"navbar-item" do %>
+          <i class="fa-solid fa-utensils fa-bounce fs-1"></i>
+          <span class="title is-3">CALORIES COUNT</span>
+         <%end%>
+          <span class="navbar-burger" data-target="navbarMenuHeroA">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </div>
+        <div id="navbarMenuHeroA" class="navbar-menu">
+          <div class="navbar-end">
+           <span class="navbar-item">
+            <%= link_to "New entry", new_entry_path, class:"button is-primary is-inverted" %> 
+           </span>   
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Hero content: will be in the middle -->
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <p class="title">
+       <% if content_for(:title) %>
+       <%= yield :title %>
+       <% else %>
+       Food Log
+       <%end%>
+      </p>
+    </div>
+  </div>
+
+  <!-- Hero footer: will stick at the bottom -->
+ 
+</section>

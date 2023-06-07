@@ -1,0 +1,14 @@
+<div class="columns mt-6 ">
+  <div class="is-flex is-justify-content-center"
+    <div class="columns mt-6 ">
+      <div class="column is-one-quarter">
+       <%= render @entry %>
+        <div class="card">
+         <div class="card-footer">
+         <%= link_to "Edit", edit_entry_path(@entry),class:"card-footer-item button is-warning mt-1 is-light" %>
+         <%= link_to "Back", entries_path,class:"card-footer-item button is-success mt-1 is-light " %>
+         <%= button_to "Destroy", @entry, method: :delete,class:"card-footer-item button is-danger mt-1 is-light" %>
+        </div>
+    </div>
+  </div>
+</div>

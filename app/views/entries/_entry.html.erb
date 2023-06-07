@@ -1,0 +1,22 @@
+
+<div id="<%= dom_id entry %>">
+ <div class="card">
+  <header class="card-header">
+   <p class="card-header-title"><%= entry.meal_type %></p>
+  </header>
+
+  <div class="card-content">
+   <div class="content">
+
+    <p><span class="has-text-weight-bold"><%= entry.calories %></span> calories</p>
+    <p><span class="has-text-weight-bold"><%= entry.proteins %></span> gram of protein</p>
+    <p><span class="has-text-weight-bold"><%= entry.carbohydrates %></span> gram of carbohydrates</p>
+    <p><span class="has-text-weight-bold"><%= entry.fats %></span>gram of fats</p>
+    <p class="italic">Logged <%= time_ago_in_words(entry.created_at)%> ago</p>
+
+   </div>
+  </div>
+   
+ </div>
+</div>
+
